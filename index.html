@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta
+		content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui, width = device-width'
+		name='viewport' />
+
+	<title>Alphabet</title>
+
+	<link rel="stylesheet" type="text/css" href="media/jquery/animate.min.css" />
+	<link rel="stylesheet" type="text/css" href="media/style.css" />
+
+	<script>
+	
+		
+		
+		document.addEventListener('touchmove', function (e) {
+			e.preventDefault();
+		}, { passive: false });
+
+		var lastTouchEnd = 0;
+
+		document.addEventListener('touchend', function (event) {
+			var now = (new Date()).getTime();
+			if (now - lastTouchEnd <= 50) {
+				event.preventDefault();
+			}
+			lastTouchEnd = now;
+		}, { passive: false });
+
+	</script>
+
+</head>
+
+<body>
+	<!--Preloader-->
+	<div class="row">
+		<div id="html5Loader" class="col-sm-12">
+			<div id="DvLoaderCont">
+				<div id="DvLoaderProgress"></div>
+			</div>
+		</div>       
+	</div>  
+	<div id="wrapper">
+
+		<div id="load_images" style="width:0px;height:0px;opacity: 0;">
+			<img src="media/images/bg.png">
+			<img src="media/images/homebotton.png">
+			<img src="media/images/cursor.png">
+			<img src="media/images/play.png">
+			<img src="media/images/batoon.png">
+			<img src="media/images/mutemusbtn.png">
+			<img src="media/images/playmusbtn.png">
+			<img src="media/images/tryagain.png">
+			<img src="media/images/welldone.png">
+
+			
+		</div>
+
+		<div id="game_container">
+			<div class="play">
+				<div class="langBtn" id="engC">English Learning</div>
+				<div class="langBtn" id="engL">English Learning <p id="lowerCase">(Lower Case)</p></div>
+				<div class="langBtn" id="hin">Hindi Learning</div>
+				<div class="langBtn" id="chinese">Chinese Learning</div>
+				<div class="langBtn" id="french">French Learning</div>
+			</div>
+			
+			
+
+			<div id="questiontxt" class="questiontxt"></div>
+			<div id="home2"></div>
+			
+			<div id="alphabet_container"></div>
+			<div id="keyboard_container"></div>
+			<div id="submit_btn" class="submit_btn">
+				<div id="submitInner" class="submitInner">
+					<div id="submitTxt" class="submitTxt"></div>
+				</div>
+			</div>
+			<div id="tryagn_btn" class="tryagn_btn">
+				<div id="tryInner" class="tryInner">
+					<div id="tryTxt" class="tryTxt"></div>
+				</div>
+			</div>
+			<div id="showanswer_btn" class="showanswer_btn">
+				<div id="showanswerInner" class="showanswerInner">
+					<div id="showanswerTxt" class="showanswerTxt">Result</div>
+				</div>
+			</div>
+
+			<div id="weldone_btn" class="weldone_btn">
+				<div id="weldoneInner" class="weldoneInner">
+					<div id="weldoneTxt" class="weldoneTxt"></div>
+				</div>
+			</div>
+
+
+			<div id="welldonebg">
+				<div id="welldone" class="welldone"></div>
+			</div>
+
+			<div id="tryagainbg">
+				<div id="tryfeedback" class="tryfeedback"></div>
+			</div>
+
+			<div id="ins_arrow" class="ins_arrow"></div>
+			<div id="play_btn" class="play_btn">
+				<div id="showanswerInner" class="showanswerInner">
+					<div id="showanswerTxt" class="showanswerTxt"></div>
+				</div>
+			</div>
+
+			<div id="play_audio" class="play_audio"></div>
+			<div id="pause_audio" class="pause_audio"></div>
+
+
+		</div>
+		<div id="stopclick"></div>
+		
+		
+	</div>
+	
+	<audio id="bgm" src="media/audio/bgm.mp3" type="audio/mpeg"></audio>
+	<audio id="tryagain" src="media/audio/tryagain.mp3" type="audio/mpeg"></audio>
+    <audio id="welldone" src="media/audio/welldone.mp3" type="audio/mpeg"></audio>
+	
+	<script type="text/javascript" src="media/jquery/jquery.js"></script>
+
+	<script type="text/javascript" src="media/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="media/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="media/jquery/jquery.ui.touch-punch.js"></script>
+
+	 <!-- Loader Libraries Starts -->
+	 <script type="text/javascript" src="media/preloader/jquery.html5Loader.min.js"></script>
+	 <script type="text/javascript" src="media/preloader/animation/jquery.big-counter.js"></script>     
+	 <script type="text/javascript" src="media/preloader/Main.class.js"></script>
+	 <script type="text/javascript" src="media/preloader/configPreload.js"></script> 
+	 <!--Loader Libraries Ends --> 
+
+	<script type="text/javascript" src="media/data/data.js"></script>
+	<script type="text/javascript" src="media/custom.js"></script>
+</body>
+
+</html>
